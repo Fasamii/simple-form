@@ -42,3 +42,7 @@ header>nav>ul>li>a:hover, header>nav>ul>li>a:focus{
     background-color: var(--shc);
     border-radius: 12px;
 }
+header>nav>ul>li>a:active{
+    background-color: var(--aac);
+    color: var(--afc);
+}
