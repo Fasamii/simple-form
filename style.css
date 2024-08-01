@@ -9,6 +9,16 @@
     --aac: #3e6990;
     --shc: #0201004a;
 }
+.dark_theme{
+    --bgc: #000000;
+    --plc: #141115;
+    --fnc: #f2f3f4;
+    --afc: #000000;
+    --acc: #ff7900;
+    --aac: #ba160c;
+    --shc: #f2f3f429;
+}
+
 *{box-sizing: border-box; margin: 0; padding: 0; font: inherit;}
 body{
     font-family: oxygen; font-size: 1.22rem;
@@ -18,8 +28,9 @@ body{
 
 header>nav{
     background-color: var(--plc); box-shadow: var(--shc) 0 4px 4px;
-    font-family: chakra; font-size: 1.44rem; text-transform: uppercase;
+    font-family: chakra; font-size: 1.44rem; text-transform: uppercase; font-weight: bolder;
     display: block; padding: 4px 0 4px 0;
+    color: var(--fnc);
 }
 header>nav>ul{
     display: block;
@@ -37,6 +48,7 @@ header>nav>ul>li:nth-child(2){
 header>nav>ul>li>a, header>nav>ul>li>a:visited{
     display: block;
     text-decoration: none; color: var(--fnc);
+    transition: 100ms;
 }
 header>nav>ul>li>a:hover, header>nav>ul>li>a:focus{
     background-color: var(--shc);
@@ -45,4 +57,5 @@ header>nav>ul>li>a:hover, header>nav>ul>li>a:focus{
 header>nav>ul>li>a:active{
     background-color: var(--aac);
     color: var(--afc);
+    transition: 0ms;
 }
