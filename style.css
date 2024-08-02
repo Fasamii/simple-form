@@ -1,115 +1,65 @@
 @font-face{font-family: chakra; src: url(assets/fonts/ChakraPetch-Medium.ttf)}
 @font-face{font-family: oxygen; src: url(assets/fonts/Oxygen-Regular.ttf)}
-:root{
-    --bgc: #f2f3f4;
-    --plc: #f5fffa;
-    --fnc: #020100;
-    --afc: #f2f3f4;
-    --acc: #5ad2f4;
-    --aac: #3e6990;
-    --shc: #0201004a;
+
+*{box-sizing: border-box; margin: 0; padding: 0; font: inherit}
+body{padding-top: 80px; width: 100%; min-height: 100vh; background-color: #000000;}
+
+.topnav{
+    display: block; width: 100%; height: 4vh;
+    position: fixed; top: 0;
+    background-color: #242424;
+    line-height: 4vh;
+    box-shadow: #3b04c6 0 4px 12px;
 }
-.dark_theme{
-    --bgc: #000000;
-    --plc: #141115;
-    --fnc: #f2f3f4;
-    --afc: #000000;
-    --acc: #ff7900;
-    --aac: #ba160c;
-    --shc: #f2f3f429;
+.topnav > h2{
+    margin-left: 12vw;
+    font-family: chakra; font-size: 3vh;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
-*{box-sizing: border-box; margin: 0; padding: 0; font: inherit;}
-body{
-    margin-top: 80px;
-    font-family: oxygen; font-size: 1.22rem;
-    width: 100%; min-height: 100vh;
-    background-color: var(--bgc);
+form, form > input{
+    font-family: inherit; font-size: inherit;
+    font-family: chakra; font-size: 1.2rem;
+    font-weight: 200;
+}
+form{
+    display: inline-block; padding: 8px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border: 4px solid #494949;
+    width: 16vw; height: 140px;
+    margin-left: calc(44vw);
+    box-shadow: #ff0095 4px 4px 8px, #3b04c6 -4px -4px 8px;
 }
 
-.sticky{
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-header>nav{
-    background-color: var(--plc); box-shadow: var(--shc) 0 4px 4px;
-    font-family: chakra; font-size: 1.44rem; text-transform: uppercase; font-weight: bolder;
-    display: block; padding: 4px 0 4px 0;
-    color: var(--fnc);
-}
-header>nav>ul{
+form > input {
     display: block;
-    list-style-type: none;
-    text-align: center;
+    width: 100%; height: 25%;
+    margin-bottom: 5.5%;
+    background-color: #3f2777; border: 1px solid #ff0095;
+    border-radius: 4px; text-align: center;
+    color: rgb(255, 0, 238);
 }
-header>nav>ul>li{
-    display: inline-block;
-    width: 18%;
-}
-header>nav>ul>li:nth-child(2){
-    border-right: 2px solid var(--fnc);
-    min-height: 20px; width: 0%;
-}
-header>nav>ul>li>a, header>nav>ul>li>a:visited{
-    display: block;
-    text-decoration: none; color: var(--fnc);
-    transition: 100ms;
-}
-header>nav>ul>li>a:hover, header>nav>ul>li>a:focus{
-    background-color: var(--shc);
-    border-radius: 12px;
-}
-header>nav>ul>li>a:active{
-    background-color: var(--aac);
-    color: var(--afc);
-    transition: 0ms;
-}
-main{
-    color: var(--fnc);
-    font-family: oxygen; font-size: 2.44rem;
+form > input:hover{
+    background-color: #612fe1;
 }
 
-main>ul{
-    list-style-type: none;
+@media (max-width: 1000px){
+    form{
+        width: 40%; height: 10%;
+        margin-left: 30vw;
+    }
+    form > .last{
+        margin-bottom: 0.2%;
+    }
 }
-main>ul>li>div{
-    display: flow-root;
-    margin: 2rem;
-    border-bottom: 4px solid var(--acc);
-    padding-bottom: 2rem;
-}
-main>ul>li:last-child>div{border-bottom: none;}
-main>ul>li>div>p{
-    margin-right: 1rem;
-}
-
-.box{
-    float: left;
-    width: 24vw; height: 24vw;
-    background-color: wheat;
-    margin-right: 2rem;
-}
-
-.boxr{
-    float: right;
-    width: 24vw; height: 24vw;
-    background-color: wheat;
-    margin-right: 2rem;
-}
-
-footer{
-    display: block;
-    background-color: var(--aac);
-    min-height: 11rem;
-    height: min-content;
-    text-align: justify;
-    font-family: chakra;
-    font-size: 1.44rem;
-}
-footer>p{
-    display: inline-block;
-    margin-inline: 20%;
-    margin-top: 2rem;
+@media (max-width: 500px){
+    form{
+        width: 80%; height: 10%;
+        margin-left: 10vw;
+    }
+    form > .last{
+        margin-bottom: 0.2%;
+    }
 }
