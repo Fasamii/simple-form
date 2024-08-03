@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CONTROL</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark_theme">
+<body>
     <header>
-        <nav class="topnav">
-            <h2>CONTROL</h2>
-        </nav>
+        <span id="name">LOGIN PAGE</span><br><span id="name2"> BY FASAMI</span>
     </header>
     <main>
-        <form action="index.php" method="post">
-            <input type="text" id="login"
-            placeholder="LOGIN" required
-            minlength="5" maxlength="20">
-            <input type="password" id="passwordid"
-            placeholder="PASWWORD" required
-            minlength="10" maxlength="40">
-            <input class="last" type="submit">
+        <form action="data.php" method="post">
+        <input type="text" id="usernameid"
+        placeholder="USERNAME"
+        required minlength="5" maxlength="15">
+        <br>
+        <input type="email" id="emailid"
+        placeholder="EMAIL"
+        required>
+        <br>
+        <input type="tel" id="phonenumid"
+        placeholder="PHONE NUMBER"
+        pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
+        required>
+        <br>
+        <input type="password" id="passwordid"
+        placeholder="PASSWORD"
+        required minlength="10" maxlength="30">
+        <br>
+        <input type="reset" id="resetid">
+        <input type="submit" id="submitid" value="submit">
         </form>
     </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
